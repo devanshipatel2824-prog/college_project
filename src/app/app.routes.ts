@@ -16,9 +16,9 @@ export const routes: Routes = [
     path:'teacher',
     component:Teacher
 },
-// {
-//     path:'',
-//     redirectTo:'dashboard',
-//     pathMatch:'full'
-// }
+{
+    path:'',
+    redirectTo:'dashboard',
+    pathMatch:'full'
+}
 ];

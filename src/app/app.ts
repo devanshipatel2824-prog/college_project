@@ -6,7 +6,7 @@ import { Teacher } from "./teacher/teacher";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Dashboard],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

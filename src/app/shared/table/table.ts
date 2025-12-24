@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { StudService } from '../../service/stud-service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-table',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './table.html',
   styleUrl: './table.css',
 })
 export class Table {
-
+ @Input() details: any[] = [];
+ 
 }

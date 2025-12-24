@@ -1,1 +1,7 @@
-<p>teacher works!</p>
+<button (click)="teacherService.addTeacher()">Add Teacher</button>
+
+@if(teacherService.showForm){
+  <app-modal (save)="saveteacher($event)"></app-modal>
+}
+<app-table [details]="teacher"></app-table>
+<button (click)="gotodashboard()">BACK TO DASHBOARD</button>

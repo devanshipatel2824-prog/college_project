@@ -1,1 +1,10 @@
-<p>student works!</p>
+<h2>Student List</h2>
+<!-- <app-modal></app-modal> -->
+
+<button (click)=" studService.addStudent()">Add Student</button>
+
+@if(studService.showForm){
+  <app-modal mode="student"></app-modal>
+}
+<app-table [details]="students"></app-table>
+<button (click)="gotohome()">Go to Dashboard</button>

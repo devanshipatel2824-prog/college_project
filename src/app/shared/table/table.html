@@ -1,1 +1,21 @@
-<p>table works!</p>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Gender</th>
+  </tr>
+
+  @for (detail of details; track $index) {
+    <tr>
+        <td>{{$index+1}}</td>
+      <td>{{ detail.name }}</td>
+      <td>{{ detail.phoneno }}</td>
+      <td>{{ detail.email }}</td>
+      <td>{{ detail.address }}</td>
+      <td>{{ detail.gender }}</td>
+    </tr>
+  }
+</table>
