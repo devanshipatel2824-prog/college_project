@@ -10,24 +10,48 @@ export class StudService {
     { name: 'dhyey', phoneno: 7896354159, email: 'dhyey@gmail.com', address: 'valsad', gender: 'male' },
 
   ]
- showForm=false;
+ showForm = false;      
+model = { name:'', phoneno:0, email:'', address:'', gender:'' };
+editIndex: number | null = null;
 
-  model={ name:'',phoneno:'',email:'',address:'',gender:'' };
 
   addStudent(){
-    this.model={ name:'',phoneno:'',email:'',address:'',gender:'' };
+    this.model={ name:'',phoneno:0,email:'',address:'',gender:'' };
     this.showForm=true;
   }
-
-  // ssaveStudent() {
-  //   this.students.push({ ...this.model });
-  //   this.showForm = false;
-
-  //   // Reset model if needed
-  //   this.model = { name: '', phoneno: '', email: '', address: '', gender: '' };
-saveStudets(studentValue:any){
-   this.students.push(studentValue);
+// saveStudets(studentValue:any){
+//    this.students.push(studentValue);
+//   }
+editStudent(index: number) {
+    this.editIndex !== null;
+    this.model = { ...this.students[index] }; // copy data to form
+    this.showForm = true;
+  
   }
+
+  // Save form data (add or update)
+  saveStudent(studentValue: any) {
+    if(this.editIndex !== null) {
+      this.students[this.editIndex] = studentValue; // update existing record
+    } else {
+      this.students.push(studentValue);             // add new record
+    }
+    this.showForm = false; // close modal
+  }
+
+  // Delete student
+  deleteStudent(index: number) {
+    this.students.splice(index, 1);
+  }
+
+
+
+
+
+
+
+
+
   getStudent() {
     return this.students;
   }

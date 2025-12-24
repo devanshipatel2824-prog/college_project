@@ -4,7 +4,7 @@
 <button (click)=" studService.addStudent()">Add Student</button>
 
 @if(studService.showForm){
-  <app-modal mode="student"></app-modal>
+  <app-modal  (save)="savestudent($event)" ></app-modal>
 }
 <app-table [details]="students"></app-table>
 <button (click)="gotohome()">Go to Dashboard</button>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StudService } from '../../service/stud-service';
 import { FormsModule } from '@angular/forms';
 
@@ -11,4 +11,17 @@ import { FormsModule } from '@angular/forms';
 export class Table {
  @Input() details: any[] = [];
  
+constructor(public studService: StudService) {}
+
+  addStudent() {
+    this.studService.addStudent();
+  }
+
+  editStudent(index: number) {
+    this.studService.editStudent(index);
+  }
+
+  deleteStudent(index: number) {
+    this.studService.deleteStudent(index);
+  }
 }

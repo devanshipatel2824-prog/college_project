@@ -12,6 +12,7 @@ export class TeacherService {
 showForm=false;
 
   model={ name:'',phoneno:'',email:'',address:'',gender:'' };
+editIndex: any;
 
   addTeacher(){
     this.model={ name:'',phoneno:'',email:'',address:'',gender:'' };

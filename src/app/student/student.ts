@@ -12,24 +12,30 @@ import { Modal } from "../shared/modal/modal";
   styleUrl: './student.css',
 })
 export class Student {
-
   students: any[] = [];
   service: any;
-
   constructor(public studService: StudService) { }
 
   ngOnInit(): void {
     this.students = this.studService.getStudent();
-
-
   }
 
   protected readonly router = inject(Router);
   gotohome() {
     this.router.navigate(['dashboard']);
   }
-saveteacher(studentValue:any){
+savestudent(studentValue:any){
   console.log(studentValue);
-  this.studService.saveStudets(studentValue)
+ this.studService.saveStudent(studentValue)
 }
+editStudent(index: number) {
+  this.service.editIndex = index;
+  this.service.model = { ...this.service.getStudent()[index] };
+  this.service.showForm = true;
+}
+
+  
+
+ 
+  
 }

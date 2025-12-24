@@ -20,10 +20,17 @@ export class Modal {
  };
   @Input() editIndex:number|null = null;
   @Output() save = new EventEmitter<any>();
-
+@Output() edit=new EventEmitter<any>();
+@Input() showForm: boolean = false;
   // constructor(public s:StudService, public t:TeacherService){}
   submit(){
     this.save.emit(this.model);
     console.log(this.model);
+  }
+editdata(){
+  this.edit.emit(this.model);
+}
+ close() {
+    this.showForm = false;
   }
 }

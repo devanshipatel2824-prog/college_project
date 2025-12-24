@@ -1,15 +1,16 @@
 <form>
-  Name: <input [(ngModel)]="model.name" name="name"><br>
-  Phone: <input [(ngModel)]="model.phoneno" name="phoneno"><br>
-  Email: <input [(ngModel)]="model.email" name="email"><br>
+  Name:     <input [(ngModel)]="model.name" name="name"><br>
+  Phone:   <input [(ngModel)]="model.phoneno" name="phoneno"><br>
+  Email:   <input [(ngModel)]="model.email" name="email"><br>
   Address: <input [(ngModel)]="model.address" name="address"><br>
 
   Gender:
-  <input type="radio" value="male" name="gender" [(ngModel)]="model.gender"> Male
-  <input type="radio" value="female" name="gender" [(ngModel)]="model.gender"> Female
+           <input type="radio" value="male" name="gender" [(ngModel)]="model.gender"> Male
+           <input type="radio" value="female" name="gender" [(ngModel)]="model.gender"> Female
   <br><br>
 
   <button type="button" (click)="submit()">
-    {{ editIndex === null ? 'Save' : 'Update' }}
+    {{editIndex === null ? 'Save' : 'Update' }}
   </button>
+
 </form>
