@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { Dashboard } from './dashboard/dashboard';
+import { Student } from './student/student';
+import { Teacher } from './teacher/teacher';
 
 export const routes: Routes = [
 {
@@ -7,8 +9,16 @@ export const routes: Routes = [
     component:Dashboard
 },
 {
-    path:'',
-    redirectTo:'dashboard',
-    pathMatch:'full'
-}
+    path:'student',
+    component:Student
+},
+{
+    path:'teacher',
+    component:Teacher
+},
+// {
+//     path:'',
+//     redirectTo:'dashboard',
+//     pathMatch:'full'
+// }
 ];
