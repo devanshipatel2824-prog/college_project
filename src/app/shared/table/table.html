@@ -10,7 +10,8 @@
   </tr>
 
   @for (detail of details; track $index) {
-  <tr [routerLink]="detail.email">
+    <tr [routerLink]="detail.email">
+   
     <td>{{$index + 1}}</td>
     <td>{{ detail.name }}</td>
     <td>{{ detail.phoneno }}</td>
@@ -22,6 +23,8 @@
       <button (click)="edit.emit($index)">Edit</button>
       <button (click)="delete.emit($index)">Delete</button>
     </td>
+
   </tr>
+
   }
 </table>

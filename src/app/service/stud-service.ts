@@ -49,6 +49,6 @@ getstudentcount(){
   return this.students.length;
 }
 getStudentByEmail(email: string) {
-    return this.students.find(teacher => teacher.email === email);
+    return this.students.find(students => students.email === email);
   }
 }

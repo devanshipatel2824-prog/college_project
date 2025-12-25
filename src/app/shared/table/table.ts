@@ -14,6 +14,6 @@ export class Table {
  @Input() details: any[] = [];
    @Output() edit = new EventEmitter<any>();
   @Output() delete = new EventEmitter<number>();
-
-
+  router: any;
+  
 }

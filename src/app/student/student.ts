@@ -29,12 +29,12 @@ export class Student {
   console.log(studentValue);
  this.studService.saveStudent(studentValue)
 }
-// editdata(studvalue:any){
-//   this.studService.editStudent()
-//   }
-editdata(studentValue:any){
-    this.studService.editStudent(studentValue);
-}
+editdata(studvalue:any){
+  this.studService.editStudent(studvalue)
+  }
+// editdata(studentValue:any){
+//     this.studService.editStudent(studentValue);
+// }
 
 
 
