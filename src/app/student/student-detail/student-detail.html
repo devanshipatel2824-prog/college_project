@@ -1,5 +1,17 @@
-<p>NAME : {{ studentDetails?.name }}</p>
-<p>EMAIL : {{ studentDetails?.email }}</p>
-<p>PHONE : {{ studentDetails?.phoneno }}</p>
-<p>ADDRESS : {{ studentDetails?.address }}</p>
-<p>GENDER : {{ studentDetails?.gender }}</p>
+<table class="line-table">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Gender</th>
+  </tr>
+
+  <tr>
+    <td>{{ studentDetails?.name }}</td>
+    <td>{{ studentDetails?.email }}</td>
+    <td>{{ studentDetails?.phoneno }}</td>
+    <td>{{ studentDetails?.address }}</td>
+    <td>{{ studentDetails?.gender }}</td>
+  </tr>
+</table>

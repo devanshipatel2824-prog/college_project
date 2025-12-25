@@ -26,6 +26,7 @@ export class StudService {
     this.editIndex = index;                      // FIX
     this.model = { ...this.students[index] };    // copy data
     this.showForm = true;
+    
   }
   //save the data of stduent
   saveStudent(studentValue: any) {
