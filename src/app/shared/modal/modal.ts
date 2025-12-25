@@ -11,26 +11,20 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './modal.css',
 })
 export class Modal {
- @Input() model={
-   name: '',
-   phoneno: 0,
-   email: '',
-   address: '',
-   gender: '',
- };
-  @Input() editIndex:number|null = null;
+//  @Input() model={
+//    name: '',
+//    phoneno: 0,
+//    email: '',
+//    address: '',
+//    gender: '',
+//  };
+ @Input() model: any;
+@Input() editIndex: number | null = null;
   @Output() save = new EventEmitter<any>();
-@Output() edit=new EventEmitter<any>();
-@Input() showForm: boolean = false;
-  // constructor(public s:StudService, public t:TeacherService){}
+
+
   submit(){
     this.save.emit(this.model);
     console.log(this.model);
-  }
-editdata(){
-  this.edit.emit(this.model);
-}
- close() {
-    this.showForm = false;
   }
 }

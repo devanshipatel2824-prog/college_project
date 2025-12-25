@@ -10,18 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class Table {
  @Input() details: any[] = [];
- 
-constructor(public studService: StudService) {}
+   @Output() edit = new EventEmitter<number>();
+  @Output() delete = new EventEmitter<number>();
 
-  addStudent() {
-    this.studService.addStudent();
-  }
-
-  editStudent(index: number) {
-    this.studService.editStudent(index);
-  }
-
-  deleteStudent(index: number) {
-    this.studService.deleteStudent(index);
-  }
 }

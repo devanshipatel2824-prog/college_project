@@ -13,7 +13,6 @@ import { Modal } from "../shared/modal/modal";
 })
 export class Student {
   students: any[] = [];
-  service: any;
   constructor(public studService: StudService) { }
 
   ngOnInit(): void {
@@ -24,18 +23,14 @@ export class Student {
   gotohome() {
     this.router.navigate(['dashboard']);
   }
-savestudent(studentValue:any){
-  console.log(studentValue);
- this.studService.saveStudent(studentValue)
-}
-editStudent(index: number) {
-  this.service.editIndex = index;
-  this.service.model = { ...this.service.getStudent()[index] };
-  this.service.showForm = true;
+  savestudent(studentValue: any) {
+    this.studService.saveStudent(studentValue);
+  }
+
+  editdata(index: number) {
+  this.studService.editStudent(index);
 }
 
-  
 
- 
-  
+
 }
