@@ -1,10 +1,14 @@
 <p>Teacher List</p>
-<button (click)="teacherService.addTeacher()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-Add Teacher
+<button (click)="teacherService.addTeacher()" type="button" class="btn btn-primary" data-bs-toggle="modal"
+  data-bs-target="#exampleModal">
+  ADD TEACHER
 </button>
 <br>
-
-<app-table [details]="teacher"></app-table>
+@if(teacherService.showForm){
+        <app-modal [model]="teacherService.model" [editIndex]="teacherService.editIndex"
+          (save)="savesteacher($event)"></app-modal>
+        }
+<app-table [details]="teacher" (edit)="editdata($event)" (delete)="teacherService.deleteteacher($event)"></app-table>
 <button (click)="gotodashboard()">BACK TO DASHBOARD</button>
 
 <!-- Modal -->
@@ -16,9 +20,7 @@ Add Teacher
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        @if(teacherService.showForm){
-  <app-modal (save)="saveteacher($event)"></app-modal>
-}
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

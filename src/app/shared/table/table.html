@@ -10,7 +10,7 @@
   </tr>
 
   @for (detail of details; track $index) {
-  <tr>
+  <tr [routerLink]="detail.email">
     <td>{{$index + 1}}</td>
     <td>{{ detail.name }}</td>
     <td>{{ detail.phoneno }}</td>

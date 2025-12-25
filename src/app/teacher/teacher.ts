@@ -23,8 +23,11 @@ export class Teacher {
   gotodashboard() {
     this.router.navigate(['dashboard']);
   }
-saveteacher(teacherValue:any){
-  console.log(teacherValue);
-  this.teacherService.saveTeacher(teacherValue)
+savesteacher(teacherValue: any) {
+    this.teacherService.saveTeacher(teacherValue);
+  }
+
+  editdata(index: number) {
+  this.teacherService.editTeacher(index);
 }
 }

@@ -12,6 +12,8 @@ import { Modal } from "../shared/modal/modal";
   styleUrl: './student.css',
 })
 export class Student {
+
+
   students: any[] = [];
   constructor(public studService: StudService) { }
 
@@ -23,12 +25,15 @@ export class Student {
   gotohome() {
     this.router.navigate(['dashboard']);
   }
-  savestudent(studentValue: any) {
-    this.studService.saveStudent(studentValue);
-  }
-
-  editdata(index: number) {
-  this.studService.editStudent(index);
+  savestudent(studentValue:any){
+  console.log(studentValue);
+ this.studService.saveStudent(studentValue)
+}
+// editdata(studvalue:any){
+//   this.studService.editStudent()
+//   }
+editdata(studentValue:any){
+    this.studService.editStudent(studentValue);
 }
 
 

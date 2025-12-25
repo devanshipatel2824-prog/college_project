@@ -41,16 +41,13 @@ export class StudService {
   deleteStudent(index: number) {
     this.students.splice(index, 1);
   }
-
-
-
-
-
-
-
-
-
   getStudent() {
     return this.students;
+  }
+getstudentcount(){
+  return this.students.length;
+}
+getStudentByEmail(email: string) {
+    return this.students.find(teacher => teacher.email === email);
   }
 }
