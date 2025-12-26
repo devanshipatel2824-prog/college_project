@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TeacherService } from '../service/teacher-service';
 import { Table } from "../shared/table/table";
 import { Modal } from "../shared/modal/modal";
+import { person } from '../interface/interface';
 
 @Component({
   selector: 'app-teacher',
@@ -11,8 +12,8 @@ import { Modal } from "../shared/modal/modal";
   styleUrl: './teacher.css',
 })
 export class Teacher {
-  teacher: any[] = [];
-  studService: any;
+  teacher: person[] = [];
+  // studService: person;
 
   constructor(public teacherService: TeacherService) { }
 

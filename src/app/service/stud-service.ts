@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { email } from '@angular/forms/signals';
+import { Gender, person } from '../interface/interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StudService {
-  private students = [
-    { name: 'devanshi', phoneno: 8141615559, email: 'devanshi@gmail.com', address: 'dungri reliya faliya', gender: 'female' },
-    { name: 'dhyey', phoneno: 7896354159, email: 'dhyey@gmail.com', address: 'valsad', gender: 'male' },
+  private students:person[] = [
+    { name: 'devanshi', phoneno: 8141615559, email: 'devanshi@gmail.com', address: 'dungri reliya faliya', gender: Gender.Female },
+    { name: 'dhyey', phoneno: 7896354159, email: 'dhyey@gmail.com', address: 'valsad', gender: Gender.Male },
   ]
   showForm = false;
   model = { name: '', phoneno: 0, email: '', address: '', gender: '' };
@@ -29,7 +30,7 @@ export class StudService {
     
   }
   //save the data of stduent
-  saveStudent(studentValue: any) {
+  saveStudent(studentValue: person) {
     if (this.editIndex !== null) {
       this.students[this.editIndex] = { ...studentValue }; // UPDATE
     } else {

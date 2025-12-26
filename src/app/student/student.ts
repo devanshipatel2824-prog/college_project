@@ -4,6 +4,7 @@ import { StudService } from '../service/stud-service';
 import { FormsModule } from '@angular/forms';
 import { Table } from "../shared/table/table";
 import { Modal } from "../shared/modal/modal";
+import { person } from '../interface/interface';
 
 @Component({
   selector: 'app-student',
@@ -14,7 +15,7 @@ import { Modal } from "../shared/modal/modal";
 export class Student {
 
 
-  students: any[] = [];
+  students: person[] = [];
   constructor(public studService: StudService) { }
 
   ngOnInit(): void {

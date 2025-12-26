@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { StudService } from '../../service/stud-service';
 import { TeacherService } from '../../service/teacher-service';
 import { FormsModule } from '@angular/forms';
+import { person } from '../../interface/interface';
 
 @Component({
   selector: 'app-modal',

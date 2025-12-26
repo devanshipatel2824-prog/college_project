@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StudService } from '../../service/stud-service';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import { person } from '../../interface/interface';
 
 @Component({
   selector: 'app-table',
@@ -11,7 +12,7 @@ import { RouterLink } from "@angular/router";
 })
 export class Table {
 
- @Input() details: any[] = [];
+ @Input() details: person[] = [];
    @Output() edit = new EventEmitter<any>();
   @Output() delete = new EventEmitter<number>();
   router: any;
