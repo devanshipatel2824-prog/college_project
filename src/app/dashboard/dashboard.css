@@ -1,50 +1,40 @@
-/* .dashboard {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-.card {
-  width: 220px;
-  height: 120px;
-  color: white;
-  padding: 20px;
-}
-.card h3 {
-  margin: 0;
-}
-.card p {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 10px;
-}
 .student-card {
-  background-color: #4caf50;
-}
-.teacher-card {
-  background-color: #ff9800;
-} */
-/* .card {
-  margin: 30px auto;
+  width: 18rem;
+  margin: 40px auto;
+  padding: 20px;
   border-radius: 15px;
- 
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 25px;
+}
+
+.student-row,
+.teacher-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.student-row .btn,
+.teacher-row .btn {
+  flex: 1;
+  /* Button takes remaining width */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.student-count,
+.teacher-count {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0d6efd;
+  min-width: 30px;
   text-align: center;
 }
-
-.card .btn {
-  padding: 12px;
-  font-size: 16px;;
-}
- */
-

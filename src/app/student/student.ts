@@ -26,17 +26,17 @@ export class Student {
   gotohome() {
     this.router.navigate(['dashboard']);
   }
-  savestudent(studentValue:any){
-  console.log(studentValue);
- this.studService.saveStudent(studentValue)
-}
-editdata(studvalue:any){
-  this.studService.editStudent(studvalue)
+  savestudent(studentValue: any) {
+    console.log(studentValue);
+    this.studService.saveStudent(studentValue)
   }
-// editdata(studentValue:any){
-//     this.studService.editStudent(studentValue);
-// }
-
+  editdata(studvalue: any) {
+    this.studService.editStudent(studvalue)
+  }
+  viewStudent(email: string) {
+    console.log('NAVIGATING TO:', email); // 🔴 DEBUG LINE
+    this.router.navigate(['student-detail', email]);
+  }
 
 
 }

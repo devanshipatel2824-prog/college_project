@@ -7,24 +7,24 @@ import { person } from '../../interface/interface';
 
 @Component({
   selector: 'app-modal',
-  imports: [CommonModule,  FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './modal.html',
   styleUrl: './modal.css',
 })
 export class Modal {
-//  @Input() model={
-//    name: '',
-//    phoneno: 0,
-//    email: '',
-//    address: '',
-//    gender: '',
-//  };
- @Input() model: any;
-@Input() editIndex: number | null = null;
+  //  @Input() model={
+  //    name: '',
+  //    phoneno: 0,
+  //    email: '',
+  //    address: '',
+  //    gender: '',
+  //  };
+  @Input() model: any;
+  @Input() editIndex: number | null = null;
   @Output() save = new EventEmitter<any>();
 
 
-  submit(){
+  submit() {
     this.save.emit(this.model);
     console.log(this.model);
   }

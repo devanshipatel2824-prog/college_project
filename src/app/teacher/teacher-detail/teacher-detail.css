@@ -1,17 +1,51 @@
+/* Table styling */
 .line-table {
-  
-  border-collapse: collapse;  
-  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .line-table th,
 .line-table td {
-  border: 1px solid black;    
-  padding: 10px;
-  text-align: center;
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .line-table th {
-  background-color: #5a6b85;
+  background-color: #007bff;
   color: white;
+  font-weight: 600;
+}
+
+.line-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.line-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Back button styling */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #17a2b8;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #138496;
 }

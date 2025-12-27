@@ -1,0 +1,60 @@
+/* Form container */
+.form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+/* Labels and inputs */
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="tel"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Radio buttons */
+.form input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+    accent-color: #007bff;
+    /* modern browsers */
+}
+
+/* Button styling */
+.form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: spacing for Gender label */
+.form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}

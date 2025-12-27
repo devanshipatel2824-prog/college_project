@@ -1,13 +1,13 @@
 <div class="form">
-  Name:     <input [(ngModel)]="model.name" name="name"><br>
-  Phone:   <input [(ngModel)]="model.phoneno" name="phoneno"><br>
-  Email:   <input  type="email" name="email" [(ngModel)]="model.email" required email /><br>
+  Name: <input [(ngModel)]="model.name" name="name"><br>
+  Phone: <input [(ngModel)]="model.phoneno" name="phoneno"><br>
+  Email: <input type="email" name="email" [(ngModel)]="model.email" required email /><br>
 
   Address: <input [(ngModel)]="model.address" name="address"><br>
 
   Gender:
-           <input type="radio" value="male" name="gender" [(ngModel)]="model.gender"> Male
-           <input type="radio" value="female" name="gender" [(ngModel)]="model.gender"> Female
+  <input type="radio" value="male" name="gender" [(ngModel)]="model.gender"> Male
+  <input type="radio" value="female" name="gender" [(ngModel)]="model.gender"> Female
   <br><br>
 
   <button type="button" (click)="submit()">

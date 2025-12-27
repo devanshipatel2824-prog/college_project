@@ -6,20 +6,20 @@ import { Gender, person } from '../interface/interface';
   providedIn: 'root',
 })
 export class TeacherService {
-  private teacher:person[] = [
+  private teacher: person[] = [
     { name: 'parul', phoneno: 5362147896, email: 'parul@gmail.com', address: 'vapi', gender: Gender.Female },
     { name: 'jayesh', phoneno: 4963214789, email: 'jayesh@gmail.com', address: 'bharuch', gender: Gender.Male },
   ]
-showForm=false;
+  showForm = false;
 
   model = { name: '', phoneno: 0, email: '', address: '', gender: '' };
   editIndex: number | null = null;
 
-  addTeacher(){
-    this.model={ name:'',phoneno:0,email:'',address:'',gender:'' };
-    this.showForm=true;
+  addTeacher() {
+    this.model = { name: '', phoneno: 0, email: '', address: '', gender: '' };
+    this.showForm = true;
   }
-editTeacher(index: number) {
+  editTeacher(index: number) {
     this.editIndex = index;                      // FIX
     this.model = { ...this.teacher[index] };    // copy data
     this.showForm = true;
@@ -42,7 +42,10 @@ editTeacher(index: number) {
   getTeacher() {
     return this.teacher;
   }
-getTeacherByEmail(email: string) {
+  getteachercount() {
+    return this.teacher.length;
+  }
+  getTeacherByEmail(email: string) {
     return this.teacher.find(teacher => teacher.email === email);
   }
 }

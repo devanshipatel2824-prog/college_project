@@ -24,11 +24,15 @@ export class Teacher {
   gotodashboard() {
     this.router.navigate(['dashboard']);
   }
-savesteacher(teacherValue: any) {
+  savesteacher(teacherValue: any) {
     this.teacherService.saveTeacher(teacherValue);
   }
 
   editdata(index: number) {
-  this.teacherService.editTeacher(index);
-}
+    this.teacherService.editTeacher(index);
+  }
+  viewteacher(email: string) {
+    console.log('NAVIGATING TO:', email);
+    this.router.navigate(['teacher-detail', email]);
+  }
 }

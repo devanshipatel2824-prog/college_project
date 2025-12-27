@@ -6,7 +6,7 @@ import { Gender, person } from '../interface/interface';
   providedIn: 'root',
 })
 export class StudService {
-  private students:person[] = [
+  private students: person[] = [
     { name: 'devanshi', phoneno: 8141615559, email: 'devanshi@gmail.com', address: 'dungri reliya faliya', gender: Gender.Female },
     { name: 'dhyey', phoneno: 7896354159, email: 'dhyey@gmail.com', address: 'valsad', gender: Gender.Male },
   ]
@@ -19,16 +19,13 @@ export class StudService {
     this.model = { name: '', phoneno: 0, email: '', address: '', gender: '' };
     this.showForm = true;
   }
-  // saveStudets(studentValue:any){
-  //    this.students.push(studentValue);
-  //   }
   //edit the student
   editStudent(index: number) {
-    this.editIndex = index;                      // FIX
-    this.model = { ...this.students[index] };    // copy data
-    this.showForm = true;
-    
+    this.editIndex = index;                   // remember which record
+    this.model = { ...this.students[index] }; // copy selected record
+    this.showForm = true;                     // OPEN MODAL
   }
+
   //save the data of stduent
   saveStudent(studentValue: person) {
     if (this.editIndex !== null) {
@@ -46,10 +43,10 @@ export class StudService {
   getStudent() {
     return this.students;
   }
-getstudentcount(){
-  return this.students.length;
-}
-getStudentByEmail(email: string) {
+  getstudentcount() {
+    return this.students.length;
+  }
+  getStudentByEmail(email: string) {
     return this.students.find(students => students.email === email);
   }
 }
